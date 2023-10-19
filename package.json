@@ -11,9 +11,11 @@
   "dependencies": {
     "@egjs/flicking-plugins": "^4.7.1",
     "@egjs/react-flicking": "^4.11.0",
+    "framer-motion": "^10.16.4",
     "next": "13.5.5",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "scrollex": "^2.0.1"
   },
   "devDependencies": {
     "@types/node": "^20",

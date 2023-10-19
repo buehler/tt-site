@@ -22,8 +22,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${fugaz.variable} ${ibm.variable}`}>
-      <body className="mb-36">{children}</body>
+    <html lang="en" className={`${fugaz.variable} ${ibm.variable} bg-black text-white`}>
+      <body>{children}</body>
     </html>
   );
 }
