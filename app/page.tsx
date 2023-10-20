@@ -85,26 +85,42 @@ export default function Home() {
             </motion.div>
           </Scroll.Item>
         </Scroll.Section>
-        <Scroll.Section className="h-screen grid grid-cols-2">
-          <div className="text-left mt-12">
-            <Scroll.Item keyframes={keyframes.slideFromLeft}>
-              <h1 className="text-4xl font-display text-gold inline-block">Teabag Titans</h1>
-            </Scroll.Item>
+        <Scroll.Section>
+          <div className="grid grid-cols-2">
+            <div className="text-left mt-12">
+              <Scroll.Item keyframes={keyframes.slideFromLeft}>
+                <h1 className="text-4xl font-display text-gold inline-block">Teabag Titans</h1>
+              </Scroll.Item>
+            </div>
+            <div className="mt-12 max-w-xl">
+              <p className="text-lg mb-8">
+                Welcome to the world of the Teabag Titans, an extraordinary e-sports team that combines the thrill of
+                competitive gaming with a unique twist. With a name that reflects a bold and unapologetic spirit, Teabag
+                Titans brings together a group of talented individuals who are not only passionate about gaming but also
+                share a love for the finer things in life, including a good drink.
+              </p>
+              <p className="text-lg">
+                Despite the unconventional approach, Teabag Titans is a force to be reckoned with in the e-sports arena. Our
+                members possess exceptional gaming skills, strategic thinking, and an unwavering determination to conquer
+                their opponents. We honed our abilities through countless hours of practice and have proven ourselves in
+                various gaming tournaments.
+              </p>
+            </div>
           </div>
-          <div className="mt-12">
-            <p className="text-lg mb-8">
-              Welcome to the world of the Teabag Titans, an extraordinary e-sports team that combines the thrill of
-              competitive gaming with a unique twist. With a name that reflects a bold and unapologetic spirit, Teabag Titans
-              brings together a group of talented individuals who are not only passionate about gaming but also share a love
-              for the finer things in life, including a good drink.
-            </p>
-            <p className="text-lg">
-              Despite the unconventional approach, Teabag Titans is a force to be reckoned with in the e-sports arena. Our
-              members possess exceptional gaming skills, strategic thinking, and an unwavering determination to conquer their
-              opponents. We honed our abilities through countless hours of practice and have proven ourselves in various
-              gaming tournaments.
-            </p>
-          </div>
+          <Scroll.Item
+            keyframes={({ section }) => ({
+              [section.topAt('container-bottom')]: {
+                opacity: 1,
+                translateX: -768,
+              },
+              [section.topAt('container-top')]: {
+                opacity: 1,
+                translateX: 100,
+              },
+            })}
+          >
+            <Image src={'/home/games.png'} alt={'games'} height={480} width={768} className="inline-block mt-8" />
+          </Scroll.Item>
         </Scroll.Section>
         <Scroll.Section className="h-screen">
           <div className="text-right mt-12">
@@ -114,6 +130,26 @@ export default function Home() {
           </div>
           <div className="mt-36">
             <PlayerCarousel />
+          </div>
+        </Scroll.Section>
+        <Scroll.Section>
+          <div className="flex">
+            <Scroll.Item keyframes={({ section }) => ({})} className="flex-grow text-right pr-8">
+              <h1 className="text-4xl font-display text-gold inline-block">Games</h1>
+            </Scroll.Item>
+            <Scroll.Item keyframes={({ section }) => ({})} className="flex-grow pl-8">
+              <p className="text-lg max-w-xl mb-8">
+                What sets us apart is: our ability to balance the competitive drive with a sense of camaraderie and
+                enjoyment. Web embrace our love for alcoholic beverages, finding a way to incorporate it into the gaming
+                experience without compromising the amazing performance. This unique combination creates an atmosphere of fun
+                and excitement, making Teabag Titans a team like no other.
+              </p>
+              <p className="text-lg max-w-xl">
+                As we step onto the virtual battlefield, we bring our A-game, fueled by our passion for gaming and our
+                favorite drinks. We are not just a team; we are a community that supports and uplifts each other, both in and
+                out of the gaming world.
+              </p>
+            </Scroll.Item>
           </div>
         </Scroll.Section>
         <Scroll.Section className="h-[2000px] relative">
