@@ -9,7 +9,14 @@ import { Scroll } from 'scrollex';
 const Title = () => (
   <Scroll.Section className="h-screen relative flex flex-col align-middle justify-center items-center mb-16">
     <div className="absolute inset-0 z-0">
-      <Image src={'/home/top.png'} fill={true} alt={'top'} fetchPriority="high" className="object-cover object-bottom" />
+      <Image
+        src={'/home/top.png'}
+        fill={true}
+        alt={'top'}
+        loading="eager"
+        fetchPriority="high"
+        className="object-cover object-bottom"
+      />
     </div>
     <Scroll.Item
       keyframes={({ section }) => ({
